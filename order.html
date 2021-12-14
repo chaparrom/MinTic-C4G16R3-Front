@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/order.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+    <title>Cookware</title>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      window.onbeforeunload = exit;
+    </script>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <img src="img/Cookware3.jpg" alt="pict" width="120" height="80">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="advisor.html">Lista Pedidos <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="container">
+      <h3>Asesor comercial</h3>
+      <table>
+        <tr>
+          <td> <label for="identification">Identificación</label> </td> 
+          <td> <label for="name">Nombre</label> </td>
+          <td> <label for="email" class="form-label">Correo</label> </td>    
+          <td> <label for="zone" class="form-label">Zona</label> </td>
+        </tr>    
+        <tr>
+          <td>      <input type="text" class="form-control" id="identification" disabled>  </td>
+          <td>      <input type="text" class="form-control" id="name" disabled>      </td>
+          <td>      <input type="email" class="form-control" id="email" disabled>   </td>
+          <td>      <input type="text" class="form-control" id="zone" disabled>      </td>
+          <td>     <button id="botonAdd" class="btn btn-black" onclick="orderCre()">Crear Orden</button> </td>
+        </tr>
+      </table>
+      <br>
+      <h3>Orden</h3>
+      <table class="table-responsive">
+        <tbody>
+          <tr>
+            <td>        <label for="reference" >Referencia</label>           </td>
+            <td>       <label for="brand">Marca</label>           </td>
+            <td>        <label for="description">Descripcion</label>           </td>
+            <td>        <label for="price">Precio</label>           </td>
+            <td>        <label for="quantity">Cantidad</label>           </td>
+            <td>        <label for="quantityOrd">Cantidad a pedir</label>           </td>
+          </tr>
+          <tr>
+            <td>        <input type="text" id="reference" style="width: 150px" disabled>        </td>
+            <td>        <input type="text" id="brand" style="width: 150px" disabled></td>
+            <td>        <input type="text" id="description" style="width: 210px" disabled></td>
+            <td>        <input type="text" id="price" class="numbers" disabled></td>
+            <td>        <input type="number" id="quantity" class="numbers" disabled></td>
+            <td>        <input type="number" id="quantityOrd" class="numbers" min="0">        </td>
+            <td>        <button id="botonAdd" class="btn btn-secondary" onclick="orderAdd()" >Adicionar Producto</button>        </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="overflow-auto" id="orderList"></div>
+    </div>
+    <br>
+    <h3>Productos</h3>
+    <div class="overflow-auto" id="productList"></div>
+  </body>
+</html>

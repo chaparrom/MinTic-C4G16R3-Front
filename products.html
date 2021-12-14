@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <title>Cookware</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <img src="img/Cookware3.jpg" alt="pict" width="120" height="80">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="users.html">Lista Usuarios <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br>
+    <br>
+    <h2>Productos</h2>
+    <div>
+      <input type="text" id="reference" placeholder="Referencia" style="width: 100px">
+      <input type="text" id="brand" placeholder="Marca" style="width: 70px">
+      <input type="text" id="category" placeholder="Categoría" style="width: 100px">
+      <input type="text" id="materiales" placeholder="Materiales" style="width: 100px">
+      <input type="text" id="dimensiones" placeholder="Dimensiones" style="width: 100px">
+      <input type="text" id="description" placeholder="Descripcion" style="width: 250px">
+      <select type="boolean" id="availability" class="form-select" aria-label="Default select example" style="width: 140px">
+        <option value="" selected>Disponibilidad</option>
+        <option value="true">Disponible</option>
+        <option value="false">No Disponible</option>
+      </select>    
+      <input type="number" id="price" placeholder="Precio" style="width: 100px" min="0">
+      <input type="number" id="quantity" placeholder="Cantidad" style="width: 100px" min="0">
+      <input type="text" id="photography" placeholder="Fotografía" style="width: 300px">
+      <button id="botonAdd" class="btn btn-secondary" onclick="productAdd()">Adicionar</button>
+      <button id="botonUpd" class="btn btn-secondary" onclick="productUpd()">Actualizar</button>
+    </div>
+    <br>
+    <div class="overflow-auto" id="productList"></div>
+
+    <script type="text/javascript" src="js/productFun.js"></script>
+  </body>
+
+</html>

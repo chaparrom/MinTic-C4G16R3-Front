@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"/>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/login.css" />
+    <script type="text/javascript" src="js/signup.js"></script>
+    <title>Cookware</title>
+  </head>
+  <body>
+    <div class="sidenav">
+      <div class="login-main-text">
+        <h2>
+          Cookware Company<br />
+          Registro de Usuarios
+        </h2>
+        <p>Digite la información solicitada</p>
+      </div>
+    </div>
+    <!--regex-->
+    <div class="main">
+      <div class="row g-3">
+      <div class="col-md-6">
+        <br>
+        <br>
+        <label for="identification" class="form-label">Identificación</label>
+        <input type="text" class="form-control" id="identification" />
+      </div>
+      <div class="col-md-6">
+        <br>
+        <br>
+        <label for="name" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="name" />
+      </div>
+      <div class="col-12">
+        <br />
+        <label for="address" class="form-label">Dirección</label>
+        <input
+          type="text"
+          class="form-control"
+          id="address"
+        />
+      </div>
+      <div class="col-md-6">
+        <br />
+        <label for="email" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" id="email" />
+      </div>
+      <div class="col-md-6">
+        <br />
+        <label for="cellPhone" class="form-label">Celular</label>
+        <input type="text" class="form-control" id="cellPhone" />
+      </div>
+      <div class="col-md-6">
+        <br />
+        <label for="password" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="password" />
+      </div>
+      <div class="col-md-6">
+        <br />
+        <label for="password1" class="form-label">Confirmación Contraseña</label>
+        <input type="password" class="form-control" id="password1" />
+      </div>
+      <div class="col-md-6">
+        <br />
+        <label for="zone" class="form-label">Zona</label>
+        <input type="text" class="form-control" id="zone" />
+      </div>
+      <div class="col-md-6">
+        <br />
+        <br />
+        <label for="type" class="form-label">Tipo</label>
+        <select id="type" class="form-select">
+          <option value="" selected>Tipo</option>
+          <option value="COORD">Coordinador de Zona</option>
+          <option value="ASE">Asesor Comercial</option>
+          <option value="ADM">Administrador</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <br />
+        <br />
+        <br />
+        <button type="submit" class="btn btn-black" onclick="signup()">
+          Registro
+        </button>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-third" onclick="window.location.href='index.html'">
+         Inicio
+        </button>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>

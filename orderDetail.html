@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+    <title>Cookware</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <img src="img/Cookware3.jpg" alt="pict" width="120" height="80">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="coordinator.html">Lista Pedidos <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="container">
+      <h3>Coordinador de Zona</h3>
+      <table>
+        <tr>
+          <td> <label for="identification">Identificación</label> </td> 
+          <td> <label for="name">Nombre</label> </td>
+          <td> <label for="email" class="form-label">Correo</label> </td>    
+          <td> <label for="zone" class="form-label">Zona</label> </td>
+        </tr>    
+        <tr>
+          <td><input type="text" class="form-control" id="identification" disabled>  </td>
+          <td><input type="text" class="form-control" id="name" disabled>      </td>
+          <td><input type="email" class="form-control" id="email" disabled>   </td>
+          <td><input type="text" class="form-control" id="zone" disabled>      </td>
+          <td> <button class='btn btn-secondary' onclick="orderPen()">Pendiente</button></td>
+          <td> <button class='btn btn-secondary' onclick="orderApr()">Aprobar</button></td>
+          <td> <button class='btn btn-secondary' onclick="orderRej()">Rechazar</button></td>          
+        </tr>
+      </table>
+      <br>
+      <h3>Orden </h3>
+      <table>
+        <tr>
+          <td> <label for="name1" >Asesor Comercial </label> </td>
+          <td> <label for="id">Id</label> </td>
+          <td> <label for="date" class="form-label" >Fecha</label> </td>
+          <td> <label for="status" class="form-label" >Estado</label> </td>
+        </tr>
+        <tr>
+          <td> <input type="text" class="form-control" id="name1" style='width: 300px' disabled> </td>
+          <td> <input type="text" class="form-control" id="id"  style='width: 150px' disabled> </td>
+          <td> <input type="text" class="form-control" id="date" style='width: 300px' disabled> </td>
+          <td> <input type="text" class="form-control" id="status" style='width: 150px' disabled> </td>
+
+        </tr>
+      </table>
+      <br>
+      <h3>Productos</h3>
+      <div class="overflow-auto" id="orderDet"></div>
+    </div>
+    <script type="text/javascript" src="js/orderDetail.js"></script>
+  </body>
+</html>
